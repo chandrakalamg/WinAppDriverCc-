@@ -26,17 +26,9 @@ namespace WinAppDriverSeleniumAutomation
             Console.WriteLine("Click Edit accounts");
             sourcetreeSession.FindElementByName("Edit Accounts...").Click();
             Console.WriteLine(sourcetreeSession.FindElementByName("Options").Displayed);
+            sourcetreeSession.Quit();
         }
 
-        public static void TearDown()
-        {
-
-            if (sourcetreeSession != null)
-            {
-                sourcetreeSession.Quit();
-                sourcetreeSession = null;
-            }
-        }
 /*
         //[TestMethod]
         //public void remote()
